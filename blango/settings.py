@@ -40,7 +40,8 @@ class Dev(Configuration):
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
-        'debug_toolbar'
+        'debug_toolbar',
+        'blango_auth'
     ]
 
     MIDDLEWARE = [
@@ -148,6 +149,7 @@ class Dev(Configuration):
           "level": "DEBUG",
       },
     }
+    AUTH_USER_MODEL = 'blango_auth.User'
 
 class Prod(Dev):
   DEBUG = values.BooleanValue(False)
